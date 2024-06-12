@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Amazon Clone</title>
+</head>
+
+<body>
+    <header id="top">
+        <!-- navbar for mobile -->
+        <div class="mobile-navbar">
+
+            <!-- menu for mobile -->
+            <div class="menu">
+                <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                    width="24px" fill="#e8eaed">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                </svg>
+                <img src="images/amazon_logo.png" class="amazon-logo" alt="amazon logo for mobile">
+
+                <!-- signin, cart block -->
+                <div class="signin-block">
+                    <span>Sign in></span>
+                    <svg class="user-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                        width="24px" fill="#e8eaed">
+                        <path
+                            d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z" /></svg>
+                    <img src="images/amazon-cart.png" class="cart-forMobile" alt="amazon cart for mobile">
+                </div>
+            </div>
+
+            <!-- search bar for mobile -->
+            <div class="search-bar-mobile">
+                <select name="all" id="all" class="search-select">
+                    <option>All Departments</option>
+                    <option>Arts & Craft</option>
+                    <option>Baby</option>
+                    <option>Beauty</option>
+                    <option>Books</option>
+                    <option>Computer</option>
+                    <option>Deals</option>
+                    <option>Electornics</option>
+                    <option>Gils fashion</option>
+                    <option>Home & HouseHold</option>
+                    <option>Men's fashion</option>
+                    <option>Music</option>
+                    <option>Pet Supplies</option>
+                    <option>Tools & Home Improvement</option>
+                    <option>Toys & Games</option>
+                    <option>Women's fashion</option>
+                </select>
+                <input type="text" placeholder="Search Amazon.in" class="search-input">
+                <div class="mobile-search-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                        <path
+                            d="M781.692-136.924 530.461-388.155q-30 24.769-69 38.769t-80.692 14q-102.55 0-173.582-71.014t-71.032-173.537q0-102.524 71.014-173.601 71.014-71.076 173.538-71.076 102.523 0 173.6 71.032T625.384-580q0 42.846-14.385 81.846-14.385 39-38.385 67.846l251.231 251.231-42.153 42.153Zm-400.923-258.46q77.308 0 130.962-53.654Q565.385-502.692 565.385-580q0-77.308-53.654-130.962-53.654-53.654-130.962-53.654-77.308 0-130.962 53.654Q196.154-657.308 196.154-580q0 77.308 53.653 130.962 53.654 53.654 130.962 53.654Z" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- categories for mobile -->
+            <div class="mobile-categories">
+                <span>Shop By</span>
+                <div class="categories">
+                    <span>category</span>
+                    <span>Your Lists</span>
+                    <span>Deals</span>
+                    <span>Sell</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- mobile sub-navbar -->
+        <div class="mobile-sub-navbar">
+            <svg class="mobile-location" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                width="24px" fill="#e8eaed">
+                <path
+                    d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
+            </svg>
+            <span>Delivering to India- update Location</span>
+        </div>
+
+        <!-- mobile shopping-categories -->
+        <div class="mobile-shoping">
+            <div class="mobile-shopping-cards">
+                <img src="images/mobiles.jpeg" alt="mobiles">
+                <span>Mobiles</span>
+            </div>
+            <div class="mobile-shopping-cards">
+                <img src="images/electronics.jpg" alt="electronics">
+                <span>Electronics</span>
+            </div>
+            <div class="mobile-shopping-cards">
+                <img src="images/fashion.jpg" alt="fashion">
+                <span>Fashion</span>
+            </div>
+            <div class="mobile-shopping-cards">
+                <img src="images/beauty.jpg" alt="beauty">
+                <span>Beauty</span>
+            </div>
+            <div class="mobile-shopping-cards">
+                <img src="images/mini tv.jpg" alt="mini TV">
+                <span>MiniTV</span>
+            </div>
+            <div class="mobile-shopping-cards">
+                <img src="images/deals.jpg" alt="deals">
+                <span>Deals</span>
+            </div>
+            <div class="mobile-shopping-cards">
+                <img src="images/Kitchen-Appliances.png" alt="Kitchen-Appliances">
+                <span>Appliances</span>
+            </div>
+            <div class="mobile-shopping-cards">
+                <img src="images/books-toys.jpg" alt="books-toys">
+                <span>Books-Toys</span>
+            </div>
+            <div class="mobile-shopping-cards">
+                <img src="images/grocery.jpg" alt="grocery">
+                <span>Grocery</span>
+            </div>
+        </div>
+
+        <!-- ---------------------------------- -->
+
+        <!-- navbar section for desktop -->
+        <div class="navabar">
+
+            <!-- Amazon Logo -->
+            <div class="nav-logo border">
+                <div class="logo"></div>
+            </div>
+
+            <!-- navbar address -->
+            <div class="nav-address border">
+                <p class="nav-address-deliverTo">Deliver to</p>
+                <div class="navbar-address-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>India</p>
+                </div>
+            </div>
+
+            <!-- nav search bar -->
+            <div class="nav-searchbar">
+                <select name="all" id="all" class="search-select">
+                    <option>All Departments</option>
+                    <option>Arts & Craft</option>
+                    <option>Baby</option>
+                    <option>Beauty</option>
+                    <option>Books</option>
+                    <option>Computer</option>
+                    <option>Deals</option>
+                    <option>Electornics</option>
+                    <option>Gils fashion</option>
+                    <option>Home & HouseHold</option>
+                    <option>Men's fashion</option>
+                    <option>Music</option>
+                    <option>Pet Supplies</option>
+                    <option>Tools & Home Improvement</option>
+                    <option>Toys & Games</option>
+                    <option>Women's fashion</option>
+                </select>
+                <input type="text" placeholder="Search Amazon.in" class="search-input">
+                <div class="nav-search-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"
+                        class="search-icon">
+                        <path
+                            d="M781.692-136.924 530.461-388.155q-30 24.769-69 38.769t-80.692 14q-102.55 0-173.582-71.014t-71.032-173.537q0-102.524 71.014-173.601 71.014-71.076 173.538-71.076 102.523 0 173.6 71.032T625.384-580q0 42.846-14.385 81.846-14.385 39-38.385 67.846l251.231 251.231-42.153 42.153Zm-400.923-258.46q77.308 0 130.962-53.654Q565.385-502.692 565.385-580q0-77.308-53.654-130.962-53.654-53.654-130.962-53.654-77.308 0-130.962 53.654Q196.154-657.308 196.154-580q0 77.308 53.653 130.962 53.654 53.654 130.962 53.654Z" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- navbar language select -->
+            <select name="navbar-language" id="navbar-language" class="navbar-language border">
+                <option value="EN" selected id="nav-language-seleced-EN">EN</option>
+                <option value="English">English</option>
+                <option value="Hindi">हिंदी</option>
+                <option value="Marathi">मराठी</option>
+                <option value="Spanish">Español</option>
+                <option value="French">Français</option>
+                <option value="German">Deutsch</option>
+                <option value="Italian">Italiano</option>
+                <option value="Japanese">日本語</option>
+                <option value="Korean">한국어</option>
+                <hr>
+                <option class="language-footer">
+                <option>
+                    <p>you are shoping on Amazon.in</p>
+                </option>
+                <option><a href="#">change country/region</a></option>
+                </option>
+            </select>
+
+            <!-- navbar Accounts & Lists -->
+            <div class="nav-accounts-lists border">
+                <span>Hello, sign in</span><br>
+                <select name="account&Lists" id="account&Lists">
+                    <option value="account&Lists" slected class="accountslist">Account & Lists</option>
+                    <option value="your account">Your Account</option>
+                    <option value="Your Orders">Your Orders</option>
+                    <option value="Your Wishlist">Your Wishlist</option>
+                    <option value="your Prime Video">Your Prime Video</option>
+                </select>
+            </div>
+
+            <!-- navbar Returns & Orders -->
+            <div class="returns-orders border">
+                <span class="returns">Returns</span><br>
+                <span class="orders">& Orders</span>
+            </div>
+
+            <!-- navbar cart -->
+            <div class="cart-section border">
+                <div class="cart-image"><img src="images/amazon-cart.png" alt="cart image"></div>
+                <span class="cart">Cart</span>
+            </div>
+        </div>
+
+
+        <!-- Sub-navbar Section -->
+        <div class="sub-navbar-section">
+            <div class="sub-navbar">
+
+                <!-- Manu icon -->
+                <div class="menu-all border">
+                    <div class="menu"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                            width="24px" fill="white" class="menu-icon">
+                            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                        </svg></div>
+                    <span class="menu-all">All</span>
+                </div>
+
+                <!-- nav categories -->
+                <div class="sub-navbar-categories">
+                    <span class="border">Amazon miniTV</span>
+                    <span class="border">Sell</span>
+                    <span class="border">Best Sellers</span>
+                    <span class="border">Today's Deals</span>
+                    <span class="border">Mobiles</span>
+                    <span class="border">Prime</span>
+                    <span class="border">Electronics</span>
+                    <span class="border">Customer Service</span>
+                    <span class="border">New Releases</span>
+                    <span class="border">Home & Kitchen</span>
+                    <span class="border">Fashion</span>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- menu bar -->
+    <div class="menubar">
+        <div class="menubar-col1">
+            <div class="header-signin">
+                <svg class="menubar-user" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                    width="24px" fill="#e8eaed">
+                    <path
+                        d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q53 0 100-15.5t86-44.5q-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160Zm0-360q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0-60Zm0 360Z" />
+                </svg>
+                <span>Hello, sign in</span>
+            </div>
+
+            <!-- mobile menubar home -->
+            <div class="mobile-menubar-home">
+                <span>Amazon Home</span>
+                <svg class="mobile-menubar-home" xmlns="http://www.w3.org/2000/svg" height="24px"
+                    viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                    <path
+                        d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" />
+                </svg>
+            </div>
+
+            <!-- menubar block-1 -->
+            <div class="block">
+                <span>Trending</span>
+                <ul>
+                    <li>Best sellers</li>
+                    <li>New Releases</li>
+                    <li>Movers and Shakers</li>
+                </ul>
+            </div>
+
+            <!-- block-2 -->
+            <div class="block">
+                <span>Digital Content & Devices</span>
+                <ul>
+                    <li>Echo & Alexa</li>
+                    <li>Fire TV</li>
+                    <li>Kindle E-Reader & eBooks</li>
+                    <li>Audible AudioBooks</li>
+                    <li>Amazon Prime Video</li>
+                    <li>Amazon Prime Music</li>
+                </ul>
+            </div>
+
+            <!-- block 3 -->
+            <div class="block">
+                <span>Shop By Category</span>
+                <ul>
+                    <li>Mobiles, Computer</li>
+                    <li>TV, Electronics</li>
+                    <li>Men's Fashion</li>
+                    <li>Women's Fashion</li>
+                    <li>Books</li>
+                </ul>
+            </div>
+
+            <!-- block 4 -->
+            <div class="block">
+                <span>Help & Setting</span>
+                <ul>
+                    <li>Your Account</li>
+                    <li>Customer Service</li>
+                    <li>Sign in</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- close menubar -->
+        <div class="menubar-col2">
+            <svg class="close" xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px"
+                fill="#e8eaed">
+                <path
+                    d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+            </svg>
+        </div>
+    </div>
+
+
+    <!-- cover section -->
+    <div class="cover">
+
+        <!-- banner images -->
+        <div class="cover-images">
+
+            <!-- previous btn -->
+            <div class="previous">
+                <svg class="prev-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                    width="24px" fill="black">
+                    <path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z" />
+                </svg>
+            </div>
+
+            <!-- banner images -->
+            <div class="banners">
+                <img src="images/cover1.jpg" alt="banner1">
+                <img src="images/cover2.png" alt="banner2">
+                <img src="images/cover3.jpg" alt="banner3">
+            </div>
+
+            <!-- next btn -->
+            <div class="next">
+                <svg class="next-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                    width="24px" fill="black">
+                    <path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z" />
+                </svg>
+            </div>
+        </div>
+
+
+        <!-- Card section -->
+        <div class="cover-gradient">
+
+            <!-- card 1 -->
+            <div class="card">
+                <span>Appliances for your home | Up to 55% off</span>
+                <div class="card-items">
+                    <div class="items">
+                        <img src="images/AC.jpg" alt="AC">
+                        <span>Air Conditioner</span>
+                    </div>
+                    <div class="items">
+                        <img src="images/refrigerator.jpg" alt="refrigerator">
+                        <span>Refrigerator</span>
+                    </div>
+                    <div class="items">
+                        <img src="images/microwave.jpg" alt="microwave">
+                        <span>Microwave</span>
+                    </div>
+                    <div class="items">
+                        <img src="images/washing machine.jpg" alt="washing-machine">
+                        <span>Washing Machine</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card 2 -->
+            <div class="card">
+                <span>Up to 60% off | Styles for women</span>
+                <div class="card-items">
+                    <div class="items">
+                        <img src="images/women clothing.jpg" alt="women clothing">
+                        <span>Women Clothing</span>
+                    </div>
+                    <div class="items">
+                        <img src="images/footware+handbag.jpg" alt="footware+handbag">
+                        <span>Footware+Handbag</span>
+                    </div>
+                    <div class="items">
+                        <img src="images/watches.jpg" alt="watches">
+                        <span>Watches</span>
+                    </div>
+                    <div class="items">
+                        <img src="images/jewellery.jpg" alt="jewellery">
+                        <span>Jewellery</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card 3 -->
+            <div class="card">
+                <span>Toys for your kids | Amazon brands</span>
+                <div class="card-items">
+                    <div class="items">
+                        <img src="images/bikes.jpeg" alt="bikes">
+                        <span>Starting ₹299 | Bikes, trikes & ride-ons</span>
+                    </div>
+                    <div class="items">
+                        <img src="images/toys.jpg" alt="toys">
+                        <span>Minimun 50% off | Toys & outdoor games</span>
+                    </div>
+                    <div class="items">
+                        <img src="images/teddy.jpg" alt="teddy">
+                        <span>Starting Rs.149 | Soft toys</span>
+                    </div>
+                    <div class="items">
+                        <img src="images/jewellery.jpg" alt="jewellery">
+                        <span>Jewellery</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card 4 -->
+            <div class="card">
+                <span>Starting ₹199 | Amazon Brands & more</span>
+                <div class="card-items">
+                    <div class="items">
+                        <img src="images/bedsheets.jpg" alt="bedsheets">
+                        <span>Starting ₹199 | Bedsheets</span>
+                    </div>
+                    <div class="items">
+                        <img src="images/Curtains.jpg" alt="Curtains">
+                        <span>Starting Rs.199 | Curtains</span>
+                    </div>
+                    <div class="items">
+                        <img src="images/ironing-board.jpg" alt="ironing-board">
+                        <span>Minimum 40% off | Ironing board</span>
+                    </div>
+                    <div class="items">
+                        <img src="images/home decor.jpg" alt="home decor">
+                        <span>Upto 60% off | Home Decor</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- personalized recommendations -->
+        <div class="personalize-recommendations">
+            <h3>Today's Deals<span><a href="#">Sell all deals</a></span></h3>
+            
+            <!-- personalized recommednation items -->
+            <div class="personalize-recommendations-items">
+
+                <div class="recommendations-item-cards">
+                    <img src="images/mobiles-img.jpg" alt="mobiles">
+                    <div class="head">
+                        <span class="discount">Upto 13% off</span>
+                        <span class="limited-time-deal">Limited time deal</span>
+                    </div>
+                    <div class="info">iQOO Neo9 Pro 5G (Fiery Red, 8GB RAM, 256GB Storage) | Snapdragon 8 Gen 2
+                        Processor | Supercomputing Chip Q1 | Flagship Level Sony IMX920 Camera</div>
+                </div>
+
+                <div class="recommendations-item-cards">
+                    <img src="images/mobiles-img2.jpg" alt="mobile">
+                    <div class="head">
+                        <div class="discount">Upto 4% off</div>
+                        <div class="limited-time-deal">Limited time deal</div>
+                    </div>
+                    <div class="info">Samsung Galaxy S24 Ultra 5G AI Smartphone (Titanium Black, 12GB, 512GB Storage)
+                    </div>
+                </div>
+
+                <div class="recommendations-item-cards">
+                    <img src="images/mobiles-img3.jpg" alt="mobile">
+                    <div class="head">
+                        <div class="discount">Upto 10% off</div>
+                        <div class="limited-time-deal">Limited time deal</div>
+                    </div>
+                    <div class="info">Redmi 12 5G Jade Black 6GB RAM 128GB ROM</div>
+                </div>
+
+                <div class="recommendations-item-cards">
+                    <img src="images/mobiles-img4.jpg" alt="mobile">
+                    <div class="head">
+                        <div class="discount">Upto 8% off</div>
+                        <div class="limited-time-deal">Limited time deal</div>
+                    </div>
+                    <div class="info">POCO M6 Pro 5G (Forest Green, 4GB RAM, 128GB Storage)</div>
+                </div>
+
+                <div class="recommendations-item-cards">
+                    <img src="images/mobiles-img5.jpg" alt="mobile">
+                    <div class="head">
+                        <div class="discount">Upto 7% off</div>
+                        <div class="limited-time-deal">Limited time deal</div>
+                    </div>
+                    <div class="info">iQOO Z9 5G (Brushed Green, 8GB RAM, 128GB Storage) | Dimensity 7200 5G Processor |
+                        Sony IMX882 OIS Camera | 120Hz AMOLED with 1800 nits Local Peak Brightness | 44W Charger in The
+                        Box</div>
+                </div>
+
+                <div class="recommendations-item-cards">
+                    <img src="images/mobiles-img6.jpg" alt="mobile">
+                    <div class="head">
+                        <div class="discount">Upto 10% off</div>
+                        <div class="limited-time-deal">Limited time deal</div>
+                    </div>
+                    <div class="info">Samsung Galaxy M34 5G (Waterfall Blue,6GB,128GB)|120Hz sAMOLED Display|50MP Triple
+                        No Shake Cam|6000 mAh Battery|4 Gen OS Upgrade & 5 Year Security Update|12GB RAM with
+                        RAM+|Android 13|Without Charger</div>
+                </div>
+
+                <div class="recommendations-item-cards">
+                    <img src="images/mobiles-img7.jpg" alt="mobile">
+                    <div class="head">
+                        <div class="discount">Upto 8% off</div>
+                        <div class="limited-time-deal">Limited time deal</div>
+                    </div>
+                    <div class="info">Redmi 12 5G Pastel Blue 4GB RAM 128GB ROM</div>
+                </div>
+
+                <div class="recommendations-item-cards">
+                    <img src="images/mobiles-img8.jpg" alt="mobile">
+                    <div class="head">
+                        <div class="discount">Upto 8% off</div>
+                        <div class="limited-time-deal">Limited time deal</div>
+                    </div>
+                    <div class="info">iQOO 12 5G (Legend, 12GB RAM, 256GB Storage) | India's 1st Snapdragon® 8 Gen 3
+                        Mobile Platform | India's only Flagship with 50MP + 50MP + 64MP Camera</div>
+                </div>
+
+                <div class="recommendations-item-cards">
+                    <img src="images/mobiles-img9.jpg" alt="mobile">
+                    <div class="head">
+                        <div class="discount">Upto 8% off</div>
+                        <div class="limited-time-deal">Limited time deal</div>
+                    </div>
+                    <div class="info">Redmi Note 13 Pro+ (Fusion Black, 8GB RAM, 256GB Storage) | World's First Mediatek
+                        7200 Ultra 5G | 200MP Hi-Res Camera | 1.5K Curved AMOLED | 120W HyperCharge</div>
+                </div>
+
+                <div class="recommendations-item-cards">
+                    <img src="images/mobiles-img10.jpg" alt="mobile">
+                    <div class="head">
+                        <div class="discount">Upto 8% off</div>
+                        <div class="limited-time-deal">Limited time deal</div>
+                    </div>
+                    <div class="info">Lava O2 (Royal Gold, 8GB RAM, UFS 2.2 128GB Storage) |AG Glass Back|T616 Octacore
+                        Processor|18W Fast Charging|6.5 inch 90Hz Punch Hole Display|50MP AI Dual Camera|Upto 16GB
+                        Expandable RAM</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Furniture -->
+        <div class="furniture-section">
+            <h3>Up to 45% off | Furniture to elevate your living space from stores nearby<span><a href="#">Sell all
+                        offer</a></span></h3>
+            <svg class="slide-previous-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                width="24px">
+                <path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z" />
+            </svg>
+
+            <div class="furniture-images">
+                <img src="images/furniture1.jpg" alt="furniture1">
+                <img src="images/furniture2.jpg" alt="furniture2">
+                <img src="images/furniture3.jpg" alt="furniture3">
+                <img src="images/furniture4.jpg" alt="furniture4">
+                <img src="images/furniture5.jpg" alt="furniture5">
+                <img src="images/furniture6.jpg" alt="furniture6">
+                <img src="images/furniture7.jpg" alt="furniture7">
+                <img src="images/furniture8.jpg" alt="furniture8">
+                <img src="images/furniture9.jpg" alt="furniture9">
+                <img src="images/furniture10.jpg" alt="furniture10">
+            </div>
+
+            <svg class="slide-next-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                width="24px">
+                <path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z" />
+            </svg>
+        </div>
+
+        <!-- electronics -->
+        <div class="electronics-section">
+            <h3>Electric vehicles & motorbikes<span><a href="#">Sell all offer</a></span></h3>
+            <svg class="electronics-previous-btn" xmlns="http://www.w3.org/2000/svg" height="24px"
+                viewBox="0 -960 960 960" width="24px">
+                <path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z" />
+            </svg>
+
+            <div class="eletronics-images">
+                <img src="images/electronics1.jpg" alt="electronics1">
+                <img src="images/electronics2.jpg" alt="electronics2">
+                <img src="images/electronics3.jpg" alt="electronics3">
+                <img src="images/electronics4.jpg" alt="electronics4">
+                <img src="images/electronics5.jpg" alt="electronics5">
+                <img src="images/electronics6.jpg" alt="electronics6">
+                <img src="images/electronics7.jpg" alt="electronics7">
+                <img src="images/electronics8.jpg" alt="electronics8">
+            </div>
+
+            <svg class="electronics-next-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                width="24px">
+                <path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z" />
+            </svg>
+        </div>
+
+
+        <!-- bottom Sign in Section -->
+        <div class="bottom-section">
+            <span class="sign-in-text">See personalized recommendations</span>
+            <button>Sign in</button>
+            <span class="newCustomer">New customer? <span class="startHere">Start here.</span></span>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <a href="#top">
+                <div class="back-to-top">Back to Top</div>
+            </a>
+            <div class="upper-sub-footer">
+                <div class="box">
+                    <span>Get to Know Us</span>
+                    <ul>
+                        <li>About Us</li>
+                        <li>Careers</li>
+                        <li>Press Releases</li>
+                        <li>Amazon Science</li>
+                    </ul>
+                </div>
+
+                <div class="box">
+                    <span>Connect with Us</span>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                    </ul>
+                </div>
+
+                <div class="box">
+                    <span>Make Money with Us</span>
+                    <ul>
+                        <li>Sell on Amazon</li>
+                        <li>Sell under Amazon Accelerator</li>
+                        <li>Protect and Build Your Brand</li>
+                        <li>Amazon Global Selling</li>
+                        <li>Become an Affiliate</li>
+                        <li>Fulfilment by Amazon</li>
+                        <li>Advertise Your Products</li>
+                        <li>Amazon Pay on Merchants</li>
+                    </ul>
+                </div>
+
+                <div class="box">
+                    <span>Let Us Help You</span>
+                    <ul>
+                        <li>COVID-19 and Amazon</li>
+                        <li>Your Account</li>
+                        <li>Returns Centre</li>
+                        <li>100% Purchase Protection</li>
+                        <li>Amazon App Download</li>
+                        <li>Help</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="lower-sub-footer">
+                <img src="images/amazon_logo.png" alt="footer-logo">
+
+                <select name="language" id="language">
+                    <option value="English" selected>English</option>
+                    <option value="Hindi">हिंदी</option>
+                    <option value="Marathi">मराठी</option>
+                    <option value="Spanish">Español</option>
+                    <option value="French">Français</option>
+                    <option value="German">Deutsch</option>
+                    <option value="Italian">Italiano</option>
+                    <option value="Japanese">日本語</option>
+                    <option value="Korean">한국어</option>
+                </select>
+
+                <div class="india">India</div>
+            </div>
+
+            <!-- upper sub footer for mobile -->
+            <div class="mobile-upper-footer">
+
+                <div class="mobile-upper-footer-col">
+                    <span>Your Amazon.in</span>
+                    <span>Amazon Pay</span>
+                    <span>Your Lists</span>
+                    <span>Your Recently Viewed Items</span>
+                    <span>Sell</span>
+                </div>
+
+                <div class="mobile-upper-footer-col">
+                    <span>Your Orders</span>
+                    <span>Amazon App Download</span>
+                    <span>Your Account</span>
+                    <span>Returns</span>
+                    <span>Customer Service</span>
+                </div>
+            </div>
+
+            <!--last footer section -->
+            <div class="footer-bottom">
+                <div class="row">
+
+                    <div class="col">
+                        <span>AbeBooks</span>
+                        <ul>
+                            <li>Books, art</li>
+                            <li>& collectibles</li>
+                        </ul>
+                    </div>
+
+                    <div class="col">
+                        <span>Amazon Web Services</span>
+                        <ul>
+                            <li>Scalable Cloud</li>
+                            <li>Computing Services</li>
+                        </ul>
+                    </div>
+
+                    <div class="col">
+                        <span>Audible</span>
+                        <ul>
+                            <li>Download</li>
+                            <li>Audio Books</li>
+                        </ul>
+                    </div>
+
+                    <div class="col">
+                        <span>DPReview</span>
+                        <ul>
+                            <li>Digital</li>
+                            <li>Photography</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col">
+                        <span>Shopbop</span>
+                        <ul>
+                            <li>Designer</li>
+                            <li>Fashion Brands</li>
+                        </ul>
+                    </div>
+
+                    <div class="col">
+                        <span>Amazon Business</span>
+                        <ul>
+                            <li>Everything For</li>
+                            <li>Your Business</li>
+                        </ul>
+                    </div>
+
+                    <div class="col">
+                        <span>Prime Now</span>
+                        <ul>
+                            <li>2-Hour Delivery</li>
+                            <li>on Everyday Items</li>
+                        </ul>
+                    </div>
+
+                    <div class="col">
+                        <span>Amazon Prime Music</span>
+                        <ul>
+                            <li>100 million songs, ad-free</li>
+                            <li>Over 15 million podcast episodes</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="line1">
+                    <span>Conditions of Use & Sale Privacy Notice Interest-Based Ads</span>
+                    <span>© 1996-2024, Amazon.com, Inc. or its affiliates</span>
+                </div>
+
+            </div>
+
+            <!-- fotter bottom for mobile -->
+            <div class="mobile-footer-bottom">
+                <div class="language">
+                    <svg class="lang-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                        width="24px" fill="#e8eaed">
+                        <path
+                            d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-155.5t86-127Q252-817 325-848.5T480-880q83 0 155.5 31.5t127 86q54.5 54.5 86 127T880-480q0 82-31.5 155t-86 127.5q-54.5 54.5-127 86T480-80Zm0-82q26-36 45-75t31-83H404q12 44 31 83t45 75Zm-104-16q-18-33-31.5-68.5T322-320H204q29 50 72.5 87t99.5 55Zm208 0q56-18 99.5-55t72.5-87H638q-9 38-22.5 73.5T584-178ZM170-400h136q-3-20-4.5-39.5T300-480q0-21 1.5-40.5T306-560H170q-5 20-7.5 39.5T160-480q0 21 2.5 40.5T170-400Zm216 0h188q3-20 4.5-39.5T580-480q0-21-1.5-40.5T574-560H386q-3 20-4.5 39.5T380-480q0 21 1.5 40.5T386-400Zm268 0h136q5-20 7.5-39.5T800-480q0-21-2.5-40.5T790-560H654q3 20 4.5 39.5T660-480q0 21-1.5 40.5T654-400Zm-16-240h118q-29-50-72.5-87T584-782q18 33 31.5 68.5T638-640Zm-234 0h152q-12-44-31-83t-45-75q-26 36-45 75t-31 83Zm-200 0h118q9-38 22.5-73.5T376-782q-56 18-99.5 55T204-640Z" />
+                    </svg>
+                    <div class="english">English</div>
+                </div>
+
+                <div class="mobile-sign-in">Already a customer? Sign in</div>
+
+                <div class="mobile-link">
+                    <span>Condition of Use</span>
+                    <span>Privacy Notice</span>
+                    <span>Interest-Based Ads</span>
+                </div>
+
+                <div class="mobile-privacy-policy">
+                    <span>@ 1996-2024, Amazon.in, Inc. and ts affiliates</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
