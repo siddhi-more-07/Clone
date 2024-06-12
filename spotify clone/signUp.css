@@ -1,0 +1,157 @@
+body {
+    background: #121212;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22%;
+    max-width: 500px;
+    padding: 20px;
+    margin-top: 100px;
+    border-radius: 10px;
+}
+
+.signup-box {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo img {
+    width: 80px;
+    margin-bottom: 5px;
+    mix-blend-mode: color-dodge;
+}
+
+h1 {
+    margin-bottom: 35px;
+    font-weight: normal;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid #828282;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 13px;
+}
+
+.input-group input:hover{
+    border: 1px solid white;
+}
+
+.use-phone {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: #1db954;
+    text-align: left;
+}
+
+.next-btn {
+    width: 100%;
+    padding: 10px;
+    background: #23bf59;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: 550;
+}
+
+.next-btn:hover{
+    background: #29cb62;
+}
+
+.divider {
+    height: 1px;
+    background: #444;
+    margin: 20px 0;
+    position: relative;
+}
+
+.divider span {
+    background: #1e1e1e;
+    padding: 0 10px;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.social-signup {
+    margin-bottom: 20px;
+}
+
+.social-btn {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgb(129, 129, 129);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 14px;
+    cursor: pointer;
+    padding-left: 30px;
+    gap: 25px;
+}
+
+.social-btn img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+#apple{
+    width: 30px;
+}
+
+.login-link {
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #b3b3b3;
+}
+
+.login-link strong {
+    color: #fff;
+}
+
+footer{
+    width: 90%;
+    height: 30vh;
+    font-size: 11px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #b3b3b3;
+    padding: 60px 0;
+}

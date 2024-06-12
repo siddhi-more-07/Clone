@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/title-logo.png" type="image/png">
+    <title>Spotify Login</title>
+    <link rel="stylesheet" href="loginstyle.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <div class="logo">
+                <img src="images/spotify-login-logo.png" alt="Spotify Logo">
+            </div>
+            <h1>Log in to Spotify</h1>
+            <div class="social-login">
+                <button class="social-btn google"><img src="images/google.png" alt="Google Logo"> Continue with Google</button>
+                <button class="social-btn facebook"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo"> Continue with Facebook</button>
+                <button class="social-btn apple"><img src="images/apple.png" alt="Apple Logo" id="apple"> Continue with Apple</button>
+                <button class="social-btn phone">Continue with phone number</button>
+            </div>
+            <div class="divider"></div>
+            <form>
+                <div class="input-group">
+                    <label for="email">Email or username</label>
+                    <input type="text" id="email" placeholder="Email or username">
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Password">
+                </div>
+                <div class="remember-me">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+                <button type="submit" class="login-btn">Log In</button>
+            </form>
+            <a href="#" class="forgot-password">Forgot your password?</a>
+            <div class="divider"></div>
+            <a href="signUp.html" class="signup-link">Don't have an account? <strong> Sign up for Spotify</strong></a>
+        </div>
+    </div>
+
+    <footer>
+        <span>This site is protected by reCAPTCHA and the Google <u>Privacy Policy</u> and <u>Terms of Service</u> apply.</span>
+    </footer>
+
+</body>
+</html>
