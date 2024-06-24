@@ -10,7 +10,7 @@
 
 | App Name  | Hosted URL                                                                     |
 | --------- | -------------------------------------------------------------                  |
-| Netflix   | [visit ↗]((https://preeminent-cajeta-f72d71.netlify.app/))                     |
+| Netflix   | [visit ↗](https://preeminent-cajeta-f72d71.netlify.app/)                       |
 | Google    | [visit ↗](https://glittery-malabi-59007e.netlify.app/)                         |
 | Spotify   | [visit ↗](https://spotify-clonning.netlify.app/)                               |
 | Github    | [visit ↗]()                                                                    |
