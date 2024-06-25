@@ -1,0 +1,955 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: #0d1117;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+
+}
+
+.container .header {
+    width: 100%;
+    height: 14vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+    background-color: #010409;
+    border-bottom: 1px solid #545454ba;
+}
+
+/* header row */
+.header .row {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+}
+
+.row .menu-box,
+.row .issues,
+.row .pull-requestes,
+.row .unread-notification {
+    height: 32px;
+    width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #6b6b6bda;
+    border-radius: 7px;
+    margin-right: 15px;
+}
+
+.row .menu-box:hover,
+.row .issues:hover,
+.row .pull-requestes:hover,
+.row .unread-notification:hover {
+    cursor: pointer;
+}
+
+.row .user-name {
+    margin-left: 15px;
+    font-size: .92rem;
+    font-weight: 500;
+}
+
+.row input {
+    height: 34px;
+    width: 300px;
+    background-color: transparent;
+    border: 1px solid #828282da;
+    border-radius: 5px;
+    padding: 0 15px;
+    font-size: .92rem;
+    font-weight: 500;
+    margin-left: auto;
+    margin-right: 15px
+}
+
+.row select {
+    height: 34px;
+    width: 60px;
+    background-color: transparent;
+    border: 1px solid #828282da;
+    border-radius: 5px;
+    outline: none;
+    margin-right: 15px;
+    font-size: 20px;
+    padding: 0 7px;
+    color: #b6b6b6;
+}
+
+select option {
+    background-color: #010409;
+    font-size: .80rem;
+}
+
+.row .issues,
+.row .pull-requestes,
+.row .unread-notification {
+    height: 34px;
+    width: 34px;
+}
+
+.row .user-profile img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+}
+
+/* header navbar */
+.header .navbar {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+.nav-items:first-child{
+    border-bottom: 2px solid rgb(237, 113, 68);
+}
+
+.navbar .nav-items {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: max-content;
+    padding: 0 15px;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.nav-items span {
+    font-size: .92rem;
+    font-weight: 450;
+}
+
+.navbar .nav-items:hover {
+    background-color: #161c24e6;
+    cursor: pointer;
+    border-bottom: 2px solid rgb(237, 113, 68);
+}
+
+.nav-items #Repositories {
+    padding: 1px 8px;
+    border-radius: 30px;
+    background-color: #212730fa;
+
+}
+
+/* sidebar */
+.container .sidebar-section,
+.container .menubar-section{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: none;
+    background-color: #080a0e79;
+}
+
+.container .sidebar,
+.container .menubar{
+    height: 740px;
+    width: 340px;
+    border: 1px solid white;
+    z-index: 200;
+    position: absolute;
+    left: auto;
+    overflow-y: scroll;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    background-color: #0d1117;
+    border: 1px solid #828282da;
+    border-radius: 5px;
+    margin-top: 2px;
+    padding: 15px;
+}
+
+.sidebar .header,
+.menubar .header{
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.sidebar .header .profile-pic,
+.menubar .header .profile-pic{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    justify-self: flex-start;
+    align-self: center;
+    background-image: url(images/github\ profile.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.header .username{
+    margin-left: 15px;
+    font-size: 1.1rem;
+}
+
+.header #closeSidebar,
+.header #closeMenubar{
+    margin-left: auto;
+}
+
+.header #closeSidebar:hover,
+.header #showMenuBar:hover{
+    cursor: pointer;
+}
+
+.sidebar .tab,
+.menubar .tab{
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding:5px 10px;
+    margin-top: 2px;
+}
+
+.sidebar .tab:hover,
+.menubar .tab:hover{
+    cursor: pointer;
+    background-color: #212a38de;
+}
+
+.tab span{
+    color: #dce4f4;
+    font-size: .92rem;
+}
+
+.sidebar .divider,
+.menubar .divider{
+    width: 100%;
+    height: 1px;
+    margin-top: 3px;
+    margin-bottom: 9px;
+    background-color: #545454a1;
+}
+
+/* menubar */
+.container .menubar{
+    height: max-content;
+    left: 0;
+    right: auto;
+    overflow-y: auto;
+}
+
+.menubar .header .profile-pic
+{
+    background-image: url(images/github-photoaidcom-cropped.jpeg);
+}
+
+/* main body section */
+.container main {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    padding: 35px 0;
+    gap: 18px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+/* main user-profile */
+main .user-profile {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    margin-top: -60%;
+}
+
+.user-profile .profile-picture img {
+    width: 280px;
+    height: 280px;
+    border: 2px solid #212730fa;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.user-profile .name {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.user-profile .user-name {
+    font-size: 1.3rem;
+    color: #929292;
+    font-weight: 100;
+}
+
+.user-profile button {
+    width: 100%;
+    height: 4.2vh;
+    font-size: .90rem;
+    font-weight: 450;
+    background-color: #21262d;
+    outline: none;
+    border: 1px solid #72727246;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.user-profile button:hover {
+    cursor: pointer;
+    background-color: #2a2f38;
+}
+
+.user-profile .bio {
+    padding-right: 15px;
+    margin: 20px 0;
+}
+
+.user-profile .location,
+.user-profile .link,
+.user-profile .linkedin {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    font-size: 1rem;
+    line-height: 25px;
+}
+
+.user-profile .link a,
+.user-profile .linkedin a {
+    font-size: .86rem;
+    text-decoration: none;
+}
+
+.user-profile .link a:hover,
+.user-profile .linkedin a:hover {
+    color: #6565f0;
+    text-decoration: underline;
+}
+
+.user-profile .block-or-report {
+    color: rgb(146, 146, 146);
+    font-weight: 350;
+    margin-top: 5px;
+}
+
+/* main read-me-section */
+main .read-me-section {
+    height: max-content;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+}
+
+.read-me-section .readme-file {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #545454ba;
+    border-radius: 7px;
+    padding: 20px;
+}
+
+.readme-file .file-head {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.file-head span {
+    font-size: .80rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.readme-file img {
+    margin: 20px 0;
+}
+
+.readme-file .heading {
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
+    font-weight: 650;
+    margin: 15px 0;
+}
+
+.readme-file .divider {
+    width: 100%;
+    height: 1px;
+    background-color: #545454a1;
+    margin-bottom: 30px;
+}
+
+.readme-file .bio {
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 450;
+    margin-bottom: 25px;
+}
+
+.readme-file .bottom-box {
+    width: 100%;
+    display: flex;
+}
+
+.bottom-box .about {
+    width: 58%;
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom-box ul li {
+    font-size: .90rem;
+    padding: 8px 0;
+}
+
+li a {
+    color: rgb(87, 87, 240);
+}
+
+.bottom-box img {
+    width: 42%;
+}
+
+.about .connect-with-me {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.about img {
+    width: max-content;
+}
+
+.about .languages-tools {
+    display: flex;
+    height: 5vh;
+    width: max-content;
+    gap: 10px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* most-used-language-box */
+.readme-file .most-used-language-box {
+    width: 300px;
+    height: 170px;
+    background-color: white;
+    margin: 30px 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 2px 3px rgb(220, 220, 220) inset;
+}
+
+.most-used-language-box .title {
+    font-size: 1.2rem;
+    font-weight: 650;
+    padding: 15px;
+    color: rgba(74, 151, 232, 0.991);
+}
+
+.most-used-language-box .language-bar {
+    width: 90%;
+    height: 10px;
+    display: flex;
+    align-self: center;
+    background-color: white;
+}
+
+.language-bar .php-bar {
+    height: 100%;
+    width: 37%;
+    background-color: #505c94;
+    border-radius: 30px 0 0 30px;
+}
+
+.language-bar .css-bar {
+    width: 27%;
+    height: 100%;
+    background-color: #583c7c;
+}
+
+.language-bar .html-bar {
+    width: 30%;
+    height: 100%;
+    background-color: rgb(244, 91, 35);
+}
+
+.language-bar .js-bar {
+    width: 6%;
+    height: 100%;
+    background-color: rgb(234, 234, 2);
+}
+
+.language-bar .hack-bar {
+    height: 100%;
+    width: 2%;
+    background-color: #888484;
+    border-radius: 0 30px 30px 0;
+}
+
+.most-used-language-box .language-percent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+}
+
+.language-percent .box,
+.repository .box {
+    width: 50%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding-left: 15px;
+}
+
+
+.php-dot,
+.css-dot,
+.html-dot,
+.js-dot,
+.hack-box {
+    height: 10px;
+    width: 10px;
+    border-radius: 25px;
+}
+
+.php-dot {
+    background-color: #505c94;
+}
+
+.css-dot {
+    background-color: #583c7c;
+}
+
+.html-dot {
+    background-color: rgb(244, 91, 35);
+}
+
+.js-dot {
+    background-color: rgb(234, 234, 2);
+}
+
+.hack-box {
+    background-color: #888484;
+}
+
+.language-percent .box span,
+.repository .box span{
+    color: rgb(30, 30, 30);
+    font-size: .80rem;
+}
+
+/* popular-repositories-section */
+.read-me-section .popular-repositories-section {
+    height: max-content;
+    width: 100%;
+    padding: 5px;
+}
+
+.popular-repositories-section .title{
+    margin: 20px 0;
+}
+
+.popular-repositories-section .repositories-box {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.repositories-box .repository{
+    width: 49%;
+    height: 120px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #545454ba;
+    border-radius: 6px;
+}
+
+.repository .row{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    padding: 20px 12px;
+    justify-content: space-between;
+}
+
+.row .project a,
+.row .project abbr{
+    text-decoration: none;
+    color: rgb(106, 106, 252);
+}
+
+.row .project a:hover{
+    text-decoration: underline;
+}
+
+.repository .row button{
+    background-color: transparent;
+    color: #a8a8a8;
+    height: 23px;
+    width: 58px;
+    border-radius: 20px;
+    border: 1px solid #545454ba;
+    outline: none;
+    font-size: .80rem;
+}
+
+.repository .box span{
+    color: #a8a8a8;
+}
+
+.read-me-section .bottom{
+    font-size: .80rem;
+    color: #a8a8a8dd;
+    margin: 25px 0;
+}
+
+.read-me-section .bottom a{
+    color: rgb(106, 106, 252);
+}
+
+footer{
+    width: 60%;
+    height: 8vh;
+    display: flex;
+   margin: 15px auto;
+   align-items: center;
+    justify-content: space-evenly;
+}
+
+footer span a,
+footer span{
+    font-size: .80rem;
+    color: #a8a8a8dd;
+    text-decoration: none;
+}
+
+footer span a:hover{
+    color: rgb(106, 106, 252);
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 1650px) and (max-width: 3200px) {
+    .container .sidebar,
+    .container .menubar{
+        height: max-content;
+        width: 60%;
+    }
+
+    .sidebar .tab,
+    .menubar .tab{
+        height: max-content;
+        padding:  18px 10px;
+    }
+
+    main .user-profile {
+        margin-top: -40%;
+    }
+}
+
+@media screen and (min-width: 3200px) {
+
+    .container .sidebar,
+    .container .menubar{
+        height: max-content;
+        width: 60%;
+    }
+
+    .sidebar .tab,
+    .menubar .tab{
+        height: max-content;
+        padding:  18px 10px;
+    }
+
+    main .user-profile {
+        margin-top: -40%;
+    }
+
+}
+
+
+@media screen and (max-width: 1500px) {
+
+    .container .sidebar,
+    .container .menubar{
+        height: max-content;
+        width: 60%;
+    }
+
+    .sidebar .tab,
+    .menubar .tab{
+        height: max-content;
+        padding:  18px 10px;
+    }
+
+    /* main body section */
+    .container main {
+        width: 80%;
+    }
+
+    /* main user-profile */
+    main .user-profile {
+        width: 35%;
+    }
+
+    /* most-used-language-box */
+    .readme-file .most-used-language-box {
+        margin: 0;
+    }
+
+}
+
+@media screen and (max-width:1000px) {
+
+    .container .header {
+        height: 8vh;
+        padding: 0 6px;
+    }
+
+    .container .sidebar,
+    .container .menubar{
+        height: max-content;
+        width: 100%;
+    }
+
+    .sidebar .tab,
+    .menubar .tab{
+        height: max-content;
+        padding:  18px 10px;
+    }
+
+    .sidebar .header,
+    .menubar .header{
+        width: 100%;
+        height: 5vh;
+    }
+
+    .row .menu-box,
+    .row .issues,
+    .row .pull-requestes,
+    .row .unread-notification {
+        height: 23px;
+        width: 23px;
+        margin-right: 6px;
+        padding: 5px;
+    }
+
+    .row .github-icon{
+        height: 23px;
+        width: 23px;
+    }
+
+    .row .user-name {
+        display: none;
+    }
+
+    .row input {
+        width: 30vw;
+        height: 28px;
+        font-size: .80rem;
+        padding: 0 3px;
+        margin: 0 8px;
+    }
+
+    .row select {
+        width: 43px;
+        height: 28px;
+        padding: 0 4px;
+        margin-right: 8px;
+    }
+
+    .row .user-profile img {
+        height: 35px;
+        width: 35px;
+    }
+
+    /* header navbar */
+    .header .navbar {
+        gap: 1px;
+    }
+
+    .navbar .nav-items {
+        padding: 0 5px;
+    }
+
+    .nav-items svg {
+        height: 8px;
+        width: 8px;
+        margin-right: -5px;
+    }
+
+    .nav-items span {
+        font-size: .65rem;
+    }
+
+    .nav-items #Repositories{
+        padding: 1px 5px;
+        font-size: .70rem;
+    }
+
+    /* main body section */
+    .container main {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    /* main user-profile */
+    main .user-profile {
+        width: 80%;
+        align-items: center;
+        margin-top: 0;
+
+    }
+
+    .user-profile .profile-picture img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .profile-picture .focus {
+        top: 19%;
+        left: 57%;
+    }
+
+    .user-profile .name {
+        margin: 15px 0;
+        font-size: 1.6rem;
+    }
+
+    .user-profile .user-name {
+        font-size: 1.4rem;
+    }
+
+    .user-profile button {
+        width: 100%;
+        height: 35px;
+    }
+
+    .user-profile .bio {
+        font-size: 1.2rem;
+    }
+
+
+    .user-profile .location,
+    .user-profile .link a,
+    .user-profile .linkedin a {
+        font-size: 1rem;
+        line-height: 28px;
+    }
+
+
+    .user-profile .block-or-report {
+        text-align: left;
+        width: 100%;
+    }
+
+
+    /* main read-me-section */
+    main .read-me-section {
+        width: 80%;
+        margin-top: 30px;
+    }
+
+    .readme-file .bottom-box {
+        flex-direction: column-reverse;
+    }
+
+    .bottom-box .about {
+        width: 65%;
+    }
+
+    .bottom-box ul {
+        padding-left: 20px;
+    }
+
+    .bottom-box img {
+        width: 70%;
+        display: flex;
+        align-self: center;
+    }
+
+    .about .languages-tools {
+        margin-bottom: 25px;
+        margin-top: 15px;
+    }
+
+    #connectwithme{
+        width: max-content;
+        margin-right: auto;
+        margin-left: 5px;
+    }
+
+    .languages-tools img {
+        height: 20px;
+        width: 20px;
+    }
+
+    /* most-used-language-box */
+.readme-file .most-used-language-box {
+    width: 280px;
+    margin-left: -10px;
+}
+
+    /* popular-repositories-section */
+
+    .popular-repositories-section .repositories-box {
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+    .popular-repositories-section .title{
+        font-size: 1.2rem;
+    }
+
+    .repositories-box .repository{
+        width: 100%;
+        height: 120px;
+    }
+
+    .row .project a,
+.row .project abbr{
+    font-size: .94rem;
+}
+
+    .repository .row button{
+        margin: 0 5px;
+    }
+
+    /* footer */
+    footer{
+        width: 90%;
+        margin: 10px auto;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+
+
+}
